@@ -8,6 +8,23 @@ const itemCounter = (array, index) => {
     return array.filter((x) => x == index).length;
 };
 function updateBoard(){
+    if (guesses > 6){
+        return
+    }
+    
+    let word = ["d","e","i","t","y"];
+    let guess = document.getElementById("guess").value;
+    if(guess.length > 5){
+        return
+    }
+    if (guess.length <5){
+        return
+    }
+    if (!words.includes(guess)){
+        return
+    }
+    let correct_letters = [];
+    let misplaced_letters = [];
     if (guesses == 1){
         for(let letter = 0;letter <= 4; letter++){
             document.getElementById("first-guess").childNodes[letter].innerHTML = guess[letter].toUpperCase();
@@ -100,4 +117,4 @@ function updateBoard(){
                         ++guesses
                         console.log(guesses)
 }
-enter.addEventListener("click",updateBoard())
+enter.addEventListener("click",updateBoard)
