@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "parcel": "^2.11.0"
+  },
+  "name": "NYreplicas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/stylo-codes-stuff/NYreplicas",
+  "author": "Stylo <136652260+stylo-codes-stuff@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev-wordle": "parcel src/wordle.html",
+    "dev-index": "parcel src/index"
   }
 }

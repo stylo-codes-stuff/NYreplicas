@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stylos Wordle Replica</title>
     <link rel="stylesheet" href="css/wordle.css">
-    <script src="js/wordle.js"></script>
+    <script type="module"src="./js/wordle.js"></script>
   </head>
-  <body><br/>
-    <p id="misplaced">test</p><br/><br/>
-    <p id="correct"></p>
-    <p id="wrong">
-    <input id="guess" type="text">input guess</input>
-    <button id="submit" onclick=loadData()>submit</button>
+  <body>
+    <div class="wordbox">
+    <div id="first-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="second-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="third-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="fourth-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="fifth-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="sixth-guess"><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div><div class ="letterbox"></div></div>
+    <div id="input"><input id="guess" type="text"><button id="enter">ENTER</button></div>
+  
+  </div>
   </body>
 </html>

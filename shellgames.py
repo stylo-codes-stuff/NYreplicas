@@ -13,17 +13,15 @@ def wordle():
     while chances >= current_chance:
         correctness = ""
         guess = list(input())
+        if guess == word:
+            print("Correct!")
+            break
         correct_letters = []
         misplaced_letters = []
         for letter in range(len(guess)):
-            if word[letter] == guess[letter]:
-                correct_letters.append(guess[letter])
-        print(correct_letters)
-        print(guess.count("d"),"  ",word.count("d"))
-        for letter in range(len(guess)):
             current_letter = guess[letter]
-
             if current_letter == word[letter]:
+                correct_letters.append(guess[letter])
                 correctness += "🟩"
             elif current_letter in word and current_letter not in correct_letters and word.count(current_letter) > misplaced_letters.count(current_letter):
                 misplaced_letters.append(guess[letter])
@@ -32,5 +30,4 @@ def wordle():
                 correctness += "🟥"
         print(correctness)
         current_chance += 1
-    print(word)
 wordle()
