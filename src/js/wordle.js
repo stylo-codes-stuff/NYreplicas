@@ -7,12 +7,14 @@ var guesses = 1;
 const itemCounter = (array, index) => {
     return array.filter((x) => x == index).length;
 };
+var word = words[Math.floor(Math.random() * words.length)];
+word.split("")
+console.log(word)
 function updateBoard(){
     if (guesses > 6){
         return
     }
-    
-    let word = ["d","e","i","t","y"];
+
     let guess = document.getElementById("guess").value;
     if(guess.length > 5){
         return
